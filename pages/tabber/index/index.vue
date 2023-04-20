@@ -24,7 +24,6 @@
 		<view class="online_box">
 			<image :src="index_banner.img_url" class="online_img"></image>
 		</view>
-		
 		<view class="free_box">
 			<!-- 公共样式 -->
 			<view class="free_T_box public_tow_box">
