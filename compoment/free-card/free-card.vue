@@ -2,18 +2,22 @@
 	<view>
 		<view class="free_card_box" v-for="(item,index) in teaList" :key="index">
 			<view class="free_card_img">
-				<image :src="item.teacher_logo" mode=""></image>
+				<image :src="item.teacher_logo"></image>
 			</view>
+			
 			<view class="free_card_txt">
 				<view class="free_card_T">{{ item.limitName }}</view>
+				
 				<view class="free_card_info">
 					<view class="free_card_info_txt">
 						<view class="info_txt1">{{ item.teacher_name }}{{ item.teacher_job }}</view>
 						<view>{{ item.limitNum }}人学过</view>
 					</view>
+					
 					<view class="free_card_info_btn" v-if="item.baoming == '立即学习'">{{ item.baoming }}</view>
 					<view class="free_card_info_btn free_card_info_btn1" v-else>{{ item.baoming }}</view>
 				</view>
+				
 			</view>
 		</view>
 	</view>

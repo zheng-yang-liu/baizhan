@@ -40,8 +40,8 @@
 
 <script>
 	// 课程列表
-	import Navber from"@/uni_modules/uni-nav-bar/components/navber/navber.vue"
-	import coursenav from"@/uni_modules/coursenav/course.vue"
+	import Navber from"@/compoment/navber/navber.vue"
+	import coursenav from"@/compoment/coursenav/course.vue"
 	import FreeCard from"@/compoment/free-card/free-card.vue"
 	export default {
 		data() {
@@ -121,11 +121,15 @@
 			width: 100%;
 			justify-content: center;
 			align-items: center;
+			// 盒子模型不撑开容器本身大小
 			box-sizing: border-box;
 			overflow: hidden;
 			padding: 0 15px;
+			// 水平间隔
 			justify-content: space-between;
+			// 垂直间隔
 			align-content: space-between;
+			// 自动换行
 			flex-wrap: wrap;
 			.public_T{
 				font-size: 20px;
