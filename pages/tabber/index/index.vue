@@ -34,8 +34,16 @@
 			</view>
 			<!-- 插入出列表；实现一个课程列表效果 -->
 			<FreeCard />
+
 		</view>
-		 
+		
+		<!-- 课程推荐 -->
+		 <view class="public_title">
+			<view class="public_class_t">
+				零基础就业班
+			</view>
+			<Jobscroll />
+		 </view>
 	</view>
 </template>
 
@@ -45,6 +53,8 @@
 	import coursenav from"@/compoment/coursenav/course.vue"
 	
 	import FreeCard from"@/compoment/free-card/free-card.vue"
+	
+	import Jobscroll from"@/compoment/jobscroll/jobscroll.vue"
 	
 	export default {
 		data() {
@@ -57,14 +67,14 @@
 			
 		},
 		mounted(){
-			console.log('打印')
+			
 			//进行网页请求，获取数据
 			uni.request({
 				// response:响应
 				url: 'http://html5.bjsxt.cn/api/index/banner', //仅为示例，并非真实接口地址。
 				//回调函数·（访问成功后进行的操作）`
 				success: (res) => {
-					console.log(res.data);
+					// console.log(res.data);
 					// 更新数据
 					// console.log(res.data.top_banner);
 					this.topBanner=res.data.top_banner;
@@ -77,7 +87,8 @@
 		components: {
 			 Navber,
 			 coursenav,
-			 FreeCard
+			 FreeCard,
+			 Jobscroll
 		}
 	}
 </script>
@@ -94,7 +105,7 @@
 			justify-content: center;
 			align-items: center;
 			border-radius: 5px;
-			overflow: hidden;
+			overflow: hidden;7
 			.swiper{
 				width: 100%;
 				height: 260rpx;
@@ -143,10 +154,14 @@
 			width: 100%;
 			display: flex;
 			padding: 0 15px;
+			//元素会在垂直方向上排列，即从上到下。
 			flex-direction: column;
 			.public_class_t{
+				//字体大小
 				font-size: 22px;
+				//字体加粗
 				font-weight: 700;
+				//底部边距
 				margin-bottom: 15px;
 			}
 		}
