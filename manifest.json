@@ -1,6 +1,6 @@
 {
     "name" : "baizhan",
-    "appid" : "__UNI__81C976A",
+    "appid" : "__UNI__652EA49",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -68,10 +68,5 @@
     "uniStatistics" : {
         "enable" : false
     },
-    "vueVersion" : "2",
-    "h5" : {
-        "devServer" : {
-            "https" : false
-        }
-    }
+    "vueVersion" : "2"
 }

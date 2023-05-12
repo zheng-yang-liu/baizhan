@@ -1,39 +1,37 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
+	    {
             "path" : "pages/tabber/index/index",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "首页",
-				// 隐藏样式
-                "navigationStyle": "custom"
+				"navigationStyle": "custom"  //custom自定义
             }
             
         }
         ,{
             "path" : "pages/tabber/classify/classify",
-            "style" :                                                                                    
+            "style" :                                                                           
             {
                 "navigationBarTitleText": "分类",
 				"navigationBarBackgroundColor": "#00b783",
-				// "navigationBarTextStyle": "white",
-				"navigationBarTextStyle":"white",
-				"enablePullDownRefresh": false
-                
+				"navigationBarTextStyle": "white",
+                "enablePullDownRefresh": false
             }
-        },
-		{
+            
+        }
+		,{
 		    "path" : "pages/tabber/study/study",
 		    "style" :                                                                                    
 		    {
-		        "navigationBarTitleText": "学习中心",
-		        "navigationBarBackgroundColor": "#00b783",
-		        "navigationBarTextStyle": "white",
-		        "enablePullDownRefresh": false
+		       "navigationBarTitleText": "学习中心",
+		       "navigationBarBackgroundColor": "#00b783",
+		       "navigationBarTextStyle": "white",
+		       "enablePullDownRefresh": false
 		    }
 		    
-		},
-		{
+		}
+		,{
 		    "path" : "pages/tabber/mine/mine",
 		    "style" :                                                                                    
 		    {
@@ -44,15 +42,6 @@
 		    }
 		    
 		}
-        ,{
-            "path" : "compoment/free-card/free-card",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -60,36 +49,36 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	
 	"tabBar": {
-		"color": "#999",/* 默认字体未选中时的颜色 */
-		"selectedColor": "#00b783",/* 默认字体选中时的颜色 */
-		"borderStyle": "white",/* 边框颜色 */
-		"backgroundColor": "#ffffff",/* 背景颜色 */
-		"list": [{
-			"pagePath": "pages/tabber/index/index",
-			"iconPath": "static/tabar1.png",
-			"selectedIconPath": "static/tabaron1.png",
-			"text": "首页"
-		}, 
-		{
-			"pagePath": "pages/tabber/classify/classify",
-			"iconPath": "static/tabar2.png",
-			"selectedIconPath": "static/tabaron2.png",
-			"text": "分类"
-		},
-		{
-			"pagePath": "pages/tabber/study/study",
-			"iconPath": "static/tabar3.png",
-			"selectedIconPath": "static/tabaron3.png",
-			"text": "学习"
-		},
-		{
-			"pagePath": "pages/tabber/mine/mine",
-			"iconPath": "static/tabar4.png",
-			"selectedIconPath": "static/tabaron4.png",
-			"text": "我的"
-		}]
+		"color": "#999", //默认字体，未选中状态颜色    L
+		"selectedColor": "#00B783",  //默认字体，选中状态颜色    L
+		"borderStyle": "white", //边框颜色    L
+		"backgroundColor": "#FFF", //背景颜色  L
+		"list": [
+			{
+				"pagePath": "pages/tabber/index/index",
+				"text": "首页",
+				"iconPath": "static/tabar1.png",
+				"selectedIconPath": "static/tabaron1.png"
+			},
+			{
+				"pagePath": "pages/tabber/classify/classify",
+				"text": "分类",
+				"iconPath": "static/tabar2.png",
+				"selectedIconPath": "static/tabaron2.png"
+			},
+			{
+				"pagePath": "pages/tabber/study/study",
+				"text": "学习",
+				"iconPath": "static/tabar3.png",
+				"selectedIconPath": "static/tabaron3.png"
+			},
+			{
+				"pagePath": "pages/tabber/mine/mine",
+				"text": "我的",
+				"iconPath": "static/tabar4.png",
+				"selectedIconPath": "static/tabaron4.png"
+			}
+		]
 	}
-
 }

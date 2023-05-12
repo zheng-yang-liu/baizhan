@@ -14,6 +14,10 @@
   content: "\eec6";
 }
 
+.icon-chuangye1:before {
+  content: "\eec6";
+}
+
 .icon-chuangye:before {
   content: "\e758";
 }
@@ -290,33 +294,25 @@
   content: "\e611";
 }
 
+.icon-houduan:before {
+  content: "\e611";
+}
 
+.icon-zidonghua:before {
+  content: "\e611";
+}
 
-/* 新加 */
-.icon-houduan:before{
-	content: "\e611";
+.icon-shujufenxi:before {
+  content: "\e611";
 }
-.icon-zidonghua:before{
-	content: "\e611";
-}
-.icon-shujufenxi:before{
-	content: "\e611";
-}
+
 .icon-suanfaku:before {
-  content: "\e6c0";
+  content: "\e6a5";
 }
-.icon-chuangye1:before {
-	content: "\e607";
-}
-
-
-
-
 
 .icon-dashuju:before {
   content: "\e6a5";
 }
-
 
 .icon-rengongzhineng:before {
   content: "\e6ea";
