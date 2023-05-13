@@ -76,7 +76,7 @@
 				url:"http://html5.bjsxt.cn/api/index/banner",
 				success:(res)=> {
 					console.log("index")
-					console.log(res.data);
+					// console.log(res.data);
 					this.fontBanner=res.data.foot_banner;
 					this.topBanner=res.data.top_banner;
 					this.index_banner = res.data.index_banner;

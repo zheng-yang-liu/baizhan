@@ -1,6 +1,6 @@
 <template>
 	<view class="coures_nav_con">
-		<view class="coures_nav_info" v-for="(item,index) in list" :key="index" v-if="index<15">
+		<view class="coures_nav_info" v-for="(item,index) in list" :key="index" v-if="index<15" @click="courseItemHandel(item.id,item.course)">
 			<text class="coures_nav_icon icon iconfont" :class="item.icon"></text>
 			<view class="coures_info_text">{{item.text}}</view>
 		</view>
@@ -22,6 +22,15 @@
 					this.list = res.data.data
 				}
 			})
+		},
+		methods:{
+			courseItemHandel(id,course){
+				console.log(id,course)
+				uni.navigateTo({
+					url:"/pages/course/courselntroduce/courselntroduce?id="+id+"course"+course
+				})
+				
+			}
 		}
 	}
 </script>

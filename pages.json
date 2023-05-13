@@ -42,6 +42,17 @@
 		    }
 		    
 		}
+        ,{
+            "path" : "pages/course/courselntroduce/courselntroduce",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "课程推荐",
+				"navigationBarBackgroundColor": "#0c9c8f",
+				"navigationBarTextStyle": "white",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
