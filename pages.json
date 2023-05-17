@@ -60,6 +60,9 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
+	
+	
+	
 	"tabBar": {
 		"color": "#999", //默认字体，未选中状态颜色    L
 		"selectedColor": "#00B783",  //默认字体，选中状态颜色    L

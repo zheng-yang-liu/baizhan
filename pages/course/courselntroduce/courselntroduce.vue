@@ -4,7 +4,7 @@
 			<view class="courseIntroduce_des">
 				<view class="courseIntroduce_info">{{ introduce }}</view>
 			</view>
-			<!-- 像组件传毒数据 -->
+			<!-- 向组件传输数据 -->
 			<CourseIntroduceData :msg="introduceList"/>
 		</view>
 	</view>
@@ -15,7 +15,7 @@
 	export default {
 		data() {
 			return {
-				introduce:"线上课程合计25周，约6个月时间。涵盖了很多新增高级技术、高级框架项目、分布式项目、微服务架构项目等。不止用于学员就业、也可用于学员工作1-3年内的提升",
+				introduce:"",
 				introduceList:[]
 			}
 		},
@@ -23,18 +23,18 @@
 			CourseIntroduceData
 		},
 		onLoad(options){
-			// console.log(options);
+			console.log(options);
 			uni.request({
-				
 				url:"https://www.itbaizhan.cn/api/course/detail",
+				// 参数
 				data:{
 					id:options.id,
 					course:options.course
 				},
 				success:(res)=>{
-					console.log(res.data);
+					console.log(res);
 					// 找不到intrduce
-					// this.introduce=res.data.data.introduce;
+					this.introduce = res.data.data.introduce
 					this.introduceList=res.data.data.introduceList
 				}
 			})

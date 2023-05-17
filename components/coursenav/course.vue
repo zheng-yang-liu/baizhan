@@ -24,10 +24,14 @@
 			})
 		},
 		methods:{
+			//刘政阳
 			courseItemHandel(id,course){
-				console.log(id,course)
+				console.log(id,course);
+				// 跳转
 				uni.navigateTo({
-					url:"/pages/course/courselntroduce/courselntroduce?id="+id+"course"+course
+		
+					url:"/pages/course/courselntroduce/courselntroduce?id=" + id +"&course="+course
+					
 				})
 				
 			}
@@ -60,13 +64,13 @@
 				color: #fee94a;
 			}
 			.icon-houduan{
-				color: #fee94a;
+				color: #55aa7f;
 			}
 			.icon-zidonghua{
-				color: #fee94a;
+				color: #00aaff;
 			}
 			.icon-shujufenxi{
-				color: #fee94a;
+				color: #ffc738;
 			}
 			.icon-suanfaku{
 				color: #7ca3fe;
@@ -90,7 +94,7 @@
 				color: #0cfe00;
 			}
 			.icon-huatong{
-				color: #f7fe71;
+				color: #6b08ff;
 			}
 			.icon-bianchengshibaobiao_icon{
 				color: #fe0000;
