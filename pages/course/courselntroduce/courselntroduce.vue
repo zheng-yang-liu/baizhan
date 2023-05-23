@@ -6,21 +6,48 @@
 			</view>
 			<!-- 向组件传输数据 -->
 			<CourseIntroduceData :msg="introduceList"/>
+			<view class="question_line"></view>
+			<view class="courseIntroduce_tab_box">
+				<view class="courseIntroduce_tab_nav">
+					<view v-for="(item,index) in items" :class="{ 'btna':count === index }" @tap="change(index)" :key="index">{{ item }}</view>
+				</view>
+				<view class="courseIntroduce_tab_con">
+					<view class="discount_info" :class="{dis:count === 0}">
+						<CourseList :videoList="Clist"/>
+					</view>
+					<view class="discount_info" :class="{dis:count === 1}">
+						<CourseJieshao :images="imageT" :imageHeight="imageHeight"/>
+					</view>
+				</view>
+				
+			</view>
+			
+			
 		</view>
+		
 	</view>
 </template>
 
 <script>
 	import CourseIntroduceData  from"@/components/CourseIntroduceData/CourseIntroduceData.vue"
+	import CourseList from"@/components/CourseList/CourseList.vue"
+	import CourseJieshao from"@/components/CourseJieshao/CourseJieshao.vue"
 	export default {
 		data() {
 			return {
 				introduce:"",
-				introduceList:[]
+				introduceList:[],
+				items:["课程章节","课程介绍"],
+				count:0,
+				Clist:[],
+				imageT:"@/static/java.jpg",
+				imageHeight:""
 			}
 		},
 		components:{
-			CourseIntroduceData
+			CourseIntroduceData,
+			CourseList,
+			CourseJieshao
 		},
 		onLoad(options){
 			console.log(options);
@@ -36,14 +63,19 @@
 					// 找不到intrduce
 					this.introduce = res.data.data.introduce
 					this.introduceList=res.data.data.introduceList
+					this.Clist = res.data.data.Clist
+					this.imageHeight = res.data.data.height
 				}
 			})
 		},
 		methods: {
-			
+			change(index){
+				this.count = index;
+			}
 		}
 	}
 </script>
+
 <style lang="scss">
 	.courseIntroduce_box {
 		display: flex;
