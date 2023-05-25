@@ -53,6 +53,17 @@
             }
             
         }
+        ,{
+            "path" : "pages/course/video/video",
+            "style" :                                                                                    
+            {
+               "navigationBarTitleText": "课程视频",
+               "navigationBarBackgroundColor": "#0c9c8f",
+               "navigationBarTextStyle": "white",
+               "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

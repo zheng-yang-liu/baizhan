@@ -26,7 +26,7 @@
 		methods: {
 			clickViode(){
 				uni.navigateTo({
-					url:"/pages/couser/video/video"
+					url:"/pages/course/video/video"
 				})
 			}
 		}
